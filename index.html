@@ -140,6 +140,32 @@
 
     </p>
 
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function() {
+
+          const publishedDateString = "October 25, 2024";
+
+          // Convert published date string to a date object
+          const publishedDate = new Date(publishedDateString);
+
+          // Define options for date formatting
+          const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+
+          // Insert published date into the appropriate element
+          document.getElementById("published-date").textContent = publishedDate.toLocaleDateString('en-US', options);
+
+          // Get last modified date
+          const updatedDate = new Date(document.lastModified);
+          document.getElementById("updated-date").textContent = "Updated " + updatedDate.toLocaleDateString('en-US', options);
+          
+      });
+      
+      // Set the current year for copyright
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    </script>
+
   </body>
 
 </html>
