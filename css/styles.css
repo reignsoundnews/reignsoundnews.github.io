@@ -46,6 +46,12 @@ h1 {
 
 }
 
+html {
+  
+  background-color: black;
+  
+}
+
 #published-date, #updated-date {
 
   font-size: 0.75em;
