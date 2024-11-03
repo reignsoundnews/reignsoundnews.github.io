@@ -52,7 +52,7 @@ html {
   
 }
 
-p.footer-disclaimer {
+p.footer-disclaimer, p.sitemap {
   
   margin: 0 auto;
   padding: 20px;
