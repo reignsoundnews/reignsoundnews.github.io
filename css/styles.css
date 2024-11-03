@@ -55,6 +55,10 @@ html {
 p.article {
   
   text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  overflow-wrap: break-word;
   
 }
 
