@@ -62,6 +62,14 @@ p.footer-disclaimer, p.sitemap {
   
 }
 
+p:after {
+  
+  content: "";
+  display: inline-block;
+  width: 100%;
+  
+}
+
 #published-date, #updated-date {
 
   font-size: 0.75em;
