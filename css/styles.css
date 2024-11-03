@@ -1,3 +1,11 @@
+.footer-content {
+  
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+
 .node-type {
 
   text-transform: uppercase;
@@ -72,14 +80,6 @@ p.article:after {
   
 }
 */
-
-p.footer-disclaimer, p.sitemap {
-  
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  
-}
 
 #published-date, #updated-date {
 
