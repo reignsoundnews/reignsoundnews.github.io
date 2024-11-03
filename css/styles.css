@@ -55,6 +55,7 @@ html {
 p.article {
   
   text-align: justify;
+  text-justify: auto;
   hyphens: auto;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
