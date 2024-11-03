@@ -35,8 +35,6 @@ body {
   margin: 0;
 
   padding: 20px;
-  
-  text-align: justify;
 
 }
 
@@ -51,6 +49,12 @@ h1 {
 html {
   
   background-color: black;
+  
+}
+
+p {
+  
+  text-align: justify;
   
 }
 
