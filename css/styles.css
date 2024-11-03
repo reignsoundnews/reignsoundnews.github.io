@@ -52,6 +52,14 @@ html {
   
 }
 
+p.footer-disclaimer {
+  
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+
 #published-date, #updated-date {
 
   font-size: 0.75em;
