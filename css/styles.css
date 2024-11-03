@@ -1,10 +1,15 @@
 .footer-content {
 
-  font-family: 'JetBrains Mono', monospace;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
   
+}
+
+.footer-disclaimer {
+
+  font-family: 'JetBrains Mono', monospace;
+
 }
 
 .node-type {
