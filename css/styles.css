@@ -52,9 +52,17 @@ html {
   
 }
 
-p {
+p.article {
   
   text-align: justify;
+  
+}
+
+p.article:after {
+  
+  content: "";
+  display: inline-block;
+  width: 100%;
   
 }
 
@@ -63,14 +71,6 @@ p.footer-disclaimer, p.sitemap {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  
-}
-
-p:after {
-  
-  content: "";
-  display: inline-block;
-  width: 100%;
   
 }
 
