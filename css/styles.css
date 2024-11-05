@@ -1,7 +1,17 @@
+.article-paragraph::before {
+  
+  content: '\00B6';
+  
+  margin-right: 4px;
+  
+}
+
 .footer-content {
 
   margin: 0 auto;
+  
   padding: 20px;
+  
   text-align: center;
   
 }
