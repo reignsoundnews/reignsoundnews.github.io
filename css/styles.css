@@ -70,7 +70,9 @@ html {
 
 p.article {
 
-  text-indent: -1.5em;
+  padding-left: 2em;
+  
+  text-indent: -1em;
   
 }
 
@@ -78,7 +80,7 @@ p.article::before {
   
   content: '\00B6';
   
-  margin-right: 4px;
+  margin-right: 10px;
   
 }
 
