@@ -68,6 +68,12 @@ html {
   
 }
 
+p.article {
+
+  text-indent: -1.5em;
+  
+}
+
 p.article::before {
   
   content: '\00B6';
