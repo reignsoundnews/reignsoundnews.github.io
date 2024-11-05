@@ -68,6 +68,12 @@ html {
   
 }
 
+p.article {
+
+  margin-left: 2em;
+  
+}
+
 p.article::before {
   
   content: '\00B6';
