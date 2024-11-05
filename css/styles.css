@@ -78,7 +78,7 @@ p.article {
 
 p.article::before {
   
-  color: #777777;
+  color: wheat;
   
   content: '\00B6';
   
