@@ -73,6 +73,8 @@ p.article::before {
   content: '\00B6';
   
   margin-right: 4px;
+
+  width: 1.5em;
   
 }
 
