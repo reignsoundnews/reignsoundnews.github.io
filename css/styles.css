@@ -1,11 +1,3 @@
-.article-paragraph::before {
-  
-  content: '\00B6';
-  
-  margin-right: 4px;
-  
-}
-
 .footer-content {
 
   margin: 0 auto;
@@ -73,6 +65,14 @@ h1 {
 html {
   
   background-color: black;
+  
+}
+
+p.article::before {
+  
+  content: '\00B6';
+  
+  margin-right: 4px;
   
 }
 
