@@ -42,7 +42,7 @@
 
   <body>
 
-    <article>
+    <article data-published-date="October 25, 2024">
 
       <!-- Setting node type -->
       <div class="node-type">
@@ -59,7 +59,7 @@
       </h1>
   
       <!-- Timestamp: published date -->
-      <p id="published-date"></p>
+      <p class="published-date"></p>
       <br>
   
       <!-- Article 1 content -->
@@ -98,7 +98,7 @@
       </p>
   
       <!-- Timestamp: updated date -->
-      <p id="updated-date"></p>
+      <p class="updated-date"></p>
   
       <!-- Article ID statement-->
       <p>
@@ -150,21 +150,107 @@
       
       document.addEventListener("DOMContentLoaded", function() {
 
-          const publishedDateString = "October 25, 2024";
+        // Defining options for date formatting
+        const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
 
-          // Convert published date string to a date object
-          const publishedDate = new Date(publishedDateString);
+        /* 
+          DOCUMENT'S LAST MODIFIED DATE:
+            — Getting the HTML document's last modified date
+            — Formatting the HTML document's last modified date
+        */
+        const documentLastModifiedDate = new Date(document.lastModified);
+        const formattedDocumentDate = documentLastModifiedDate.toLocaleDateString('en-US', options);
 
-          // Define options for date formatting
-          const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+        // Getting all the <article> elements
+        const articles = document.querySelectorAll("article");
 
-          // Insert published date into the appropriate element
-          document.getElementById("published-date").textContent = publishedDate.toLocaleDateString('en-US', options);
-
-          // Get last modified date
-          const updatedDate = new Date(document.lastModified);
-          document.getElementById("updated-date").textContent = "Updated " + updatedDate.toLocaleDateString('en-US', options);
+        // Looping through each article
+        articles.forEach(
           
+          (article) => {
+
+            // Getting the published date
+            let publishedDateString = article.getAttribute("data-published-date");
+  
+            // Using the document's last modified date if publishedDateString is not set
+            if (!publishedDateString) {
+  
+              publishedDateString = documentLastModifiedDate;
+            
+            }
+  
+            /*
+              ARTICLE PUBLISHED DATE:
+                — Setting the article's published date
+                — Formatting the article's published date
+            */
+            const publishedDate = new Date(publishedDateString);
+            const publishedDateFormatted = publishedDate.toLocaleDateString('en-US', options);
+  
+            /*
+              INSERTING PUBLISHED DATE:
+                — Gathering/selecting published-date elements
+                — Inserting published date text into published-date elements
+            */
+            const publishedDateElements = article.querySelectorAll(".published-date");
+  
+            // Looping through each published-date element
+            publishedDateElements.forEach(
+              
+              (element) => {
+  
+                // Setting the text content for each element to the formatted published date
+                element.textContent = publishedDateFormatted;
+  
+              }
+              
+            );
+
+            /*
+              ARTICLE'S LAST MODIFIED DATE:
+                — Getting the article's last modified date
+                — Setting the document's last modified date as default
+                — Setting the article's last modified date
+                — Formatting the article's last modified date
+            */
+            let lastModifiedDateString = article.getAttribute("data-last-modified");
+
+            // Using the document's last modified date if lastModifiedDateString is not set
+            if (!lastModifiedDateString) {
+
+              lastModifiedDateString = documentLastModifiedDate;
+              
+            }
+
+            // Setting the article's last modified date
+            const lastModifiedDate = new Date(lastModifiedDateString);
+
+            // Formatting the article's last modified date
+            const lastModifiedDateFormatted = lastModifiedDate.toLocaleDateString('en-US', options);
+
+            /*
+              INSERTING ARTICLE'S LAST MODIFIED DATE
+                — Gathering/selecting all updated-date elements within the article element
+                — Inserting updated date text into published-date elements
+            */
+            const updatedDateElements = article.querySelectorAll(".updated-date");
+
+            // Looping through each updated-date element
+            updatedDateElements.forEach(
+              
+              (element) => {
+  
+                // Setting the text content for each element to the formatted published date
+                element.textContent = "Updated " + lastModifiedDateFormatted;
+  
+              }
+            
+            );
+
+          }
+        
+        );
+
       });
       
     </script>
