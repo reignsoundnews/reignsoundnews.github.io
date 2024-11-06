@@ -121,13 +121,13 @@ p.article:after {
 }
 */
 
-#published-date, #updated-date {
+.published-date, .updated-date {
 
   font-size: 0.75em;
 
 }
 
-#updated-date {
+.updated-date {
 
   font-style: italic;
 
