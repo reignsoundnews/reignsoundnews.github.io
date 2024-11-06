@@ -1,3 +1,9 @@
+.article-ID {
+
+  font-family: 'JetBrains Mono', monospace;
+
+}
+
 .footer-content {
 
   margin: 0 auto;
@@ -23,6 +29,18 @@
   font-size: 0.85rem;
 
   line-height: 1.6;
+
+}
+
+.published-date, .updated-date {
+
+  font-size: 0.75em;
+
+}
+
+.updated-date {
+
+  font-style: italic;
 
 }
 
@@ -120,15 +138,3 @@ p.article:after {
   
 }
 */
-
-.published-date, .updated-date {
-
-  font-size: 0.75em;
-
-}
-
-.updated-date {
-
-  font-style: italic;
-
-}
