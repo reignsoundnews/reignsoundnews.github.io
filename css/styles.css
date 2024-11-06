@@ -62,9 +62,15 @@ h1 {
 
 }
 
-html {
+body, html {
   
   background-color: black;
+  
+  color: white;
+  
+  height: 100%;
+  
+  margin: 0;
   
 }
 
