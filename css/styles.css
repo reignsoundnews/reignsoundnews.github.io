@@ -74,17 +74,23 @@ p.article {
 
   padding-right: 2em;
 
+  position: relative;
+
   text-align: justify;
-  
-  text-indent: -1em;
   
 }
 
 p.article::before {
   
-  color: wheat;
-  
   content: '\00B6';
+
+  left: 0.5em;
+
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%)
   
 }
 
