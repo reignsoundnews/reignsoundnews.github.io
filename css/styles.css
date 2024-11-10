@@ -1,5 +1,4 @@
-
-
+/*
 .article, .references p, .single-details p {
 
   animation: appear linear;
@@ -9,6 +8,7 @@
   animation-range: entry 0 cover 70%;
 
 }
+*/
 
 .article-ID {
 
@@ -80,6 +80,7 @@
 
 }
 
+/*
 @keyframes appear {
 
   from {
@@ -99,6 +100,7 @@
   }
 
 }
+*/
 
 a:link {
 
