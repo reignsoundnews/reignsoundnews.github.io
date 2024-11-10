@@ -24,6 +24,38 @@
 
 }
 
+.article-separator {
+
+  border-top: 1px solid #fff;
+
+  margin: 20px;
+
+  position: relative;
+
+  text-align: center;
+
+}
+
+.asterisk {
+
+  position: absolute;
+
+  top: -10px;
+
+}
+
+.asterisk:first-child {
+
+  left: -20px;
+
+}
+
+.asterisk:last-child {
+
+  right: -20px;
+
+}
+
 .contact p {
 
   font-size: 0.85rem;
