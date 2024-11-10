@@ -4,30 +4,70 @@
 
   <head>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- GOOGLE PUBLISHER CENTER VERIFICATION: -->
+
+    <!-- Load the Google Analytics gtag.js library asynchronously -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMPL32CFHS"></script>
     
     <script>
       
+      // Initialize the dataLayer, if it is not already initialized
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+
+      // Define the gtag function that pushes events to the dataLayer
+      function gtag(){
+
+        dataLayer.push(arguments);
+      
+      }
+
+      // Send an event to indicate the page load time (using the current date)
       gtag('js', new Date());
-    
+
+      // Configure Google Analytics with the GA4 property's unique Measurement ID
       gtag('config', 'G-TMPL32CFHS');
       
     </script>
 
-    <!-- Link to 'JetBrains' font -->
+    <!-- LINKING 'JetBrains' FONT: -->
+
+    <!-- 
+        > Pre-connect to the Google Fonts domain to speed up font loading
+        >> This helps the browser connect to the fonts.googleapis.com domain early
+        >>> This allows the font stylesheet to load faster
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!--
+        > Pre-connect to the fonts.gstatic.com domain to load static font files
+        >> This allows the browser to start making a connection to the domain where font files are served
+        >>> This further improves the load time for fonts
+    -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--
+        > Link to Google Fonts to load the JetBrains Mono font family
+        > 'family=JetBrainsMono'
+        >> Specifies the font to use
+        > 'ital,wght@0,100..800;1,100..800'
+        >> Defines requested weights and italics
+        > 'display=swap'
+        >> Ensures that the fallback font is shown until the custom font is loaded
+    -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
-    <!-- Link to 'Merriweather' font -->
+    <!-- 
+        LINKING 'Merriweather' FONT:
+        > For more details, see comments for 'JetBrains' font above
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!-- Link to Tiny5 font -->
+    <!-- 
+        LINKING 'Tiny5' FONT:
+        > For more details, see comments for 'JetBrains' font above
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
@@ -45,10 +85,17 @@
     <!-- Setting character encoding -->
     <meta charset="UTF-8">
 
-    <!-- Set viewport for responsive design:
-      — Width: ensures the page fits the screen
-      — Initial-scale: sets the zoom level -->
+    <!--
+        Set viewport for responsive design:
+        > 'Width'
+        >> Ensures the page fits the screen
+        > 'Initial-scale'
+        >> Sets the zoom level
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Setting website title -->
+    <title>REIGNSOUND™ NEWS</title>
 
   </head>
 
