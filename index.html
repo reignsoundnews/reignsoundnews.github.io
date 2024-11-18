@@ -576,7 +576,10 @@
             const lastModifiedDate = new Date(lastModifiedDateString);
 
             // Formatting the article's last modified date
-            const lastModifiedDateFormatted = lastModifiedDate.toLocaleDateString('en-US', options);
+            let lastModifiedDateFormatted = lastModifiedDate.toLocaleDateString('en-US', options);
+
+            let lastModifiedDate = new Date(lastModifiedDateString);
+            lastModifiedDateFormatted = lastModifiedDateFormatted.replace(lastModifiedDay, getOrdinal(lastModifiedDay));
 
             /*
               INSERTING ARTICLE'S LAST MODIFIED DATE
