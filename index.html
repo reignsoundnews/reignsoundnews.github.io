@@ -466,6 +466,34 @@
       
       document.addEventListener("DOMContentLoaded", function() {
 
+        // Function to get ordinal suffix for a number
+        function getOrdinal(n) {
+
+          const j = n % 10,
+                k = n % 100;
+
+          if (j === 2 && k !== 11) {
+            
+            return n + "st";
+            
+          }
+
+          if (j === 2 && k !== 12) {
+
+            return n + "nd";
+            
+          }
+
+          if (j === 3 && k !== 13) {
+
+            return n + "rd";
+            
+          }
+
+          return n + "th";
+          
+        }
+
         // Defining options for date formatting
         const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
 
@@ -473,9 +501,12 @@
           DOCUMENT'S LAST MODIFIED DATE:
             — Getting the HTML document's last modified date
             — Formatting the HTML document's last modified date
+            — Adding ordinal suffixes
         */
         const documentLastModifiedDate = new Date(document.lastModified);
-        const formattedDocumentDate = documentLastModifiedDate.toLocaleDateString('en-US', options);
+        let formattedDocumentDate = documentLastModifiedDate.toLocaleDateString('en-US', options);
+        let documentDay = documentLastModifiedDate.getDate();
+        formattedDocumentDate = formattedDocumentDate.replace(documentDay, getOrdinal(documentDay));
 
         // Getting all the <article> elements
         const articles = document.querySelectorAll("article");
@@ -499,9 +530,12 @@
               ARTICLE PUBLISHED DATE:
                 — Setting the article's published date
                 — Formatting the article's published date
+                — Adding ordinal suffixes
             */
             const publishedDate = new Date(publishedDateString);
-            const publishedDateFormatted = publishedDate.toLocaleDateString('en-US', options);
+            let publishedDateFormatted = publishedDate.toLocaleDateString('en-US', options);
+            let publishedDay = publishedDate.getDate();
+            publishedDateFormatted = publishedDateFormatted.replace(publishedDay, getOrdinal(publishedDay));
   
             /*
               INSERTING PUBLISHED DATE:
