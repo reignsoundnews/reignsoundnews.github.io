@@ -10,6 +10,9 @@
 }
 */
 
+
+/* ARTICLE STYLING */
+
 .article-ID {
 
   font-family: 'JetBrains Mono', monospace;
@@ -26,7 +29,7 @@
 
 .article-separator {
 
-  border-top: 1px solid #fff;
+  border: 0.7px solid #111;
 
   margin: 20px;
 
@@ -58,6 +61,41 @@
 }
 */
 
+/* BREAKING NEWS BANNER SCROLLER */
+.breaking-banner {
+  width: 100vw;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  /*border-bottom: 2px solid #fff;*/
+  position: relative; /* This keeps it in flow, not fixed */
+  color: black;
+  margin-left: -20px;
+  font-family: Arial;
+}
+
+.breaking-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  /* remove animation: scroll-banner... */
+}
+
+.breaking-content {
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+.breaking-content span {
+  flex-shrink: 0;
+}
+
+
+/* CONTACT DIV */
+
+
 .contact p {
 
   font-size: 0.85rem;
@@ -76,25 +114,32 @@
 
 .footer-disclaimer {
 
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "Merriweather", system-ui, sans-serif;
 
   font-size: 0.85rem;
 
 }
 
-.footer-disclaimer-line-1 {
 
-  font-family: "Tiny5", sans-serif;
+/* SEPARATOR */
 
-  font-size: 1rem;
+hr {
+
+  border: 0.7px solid #111;
   
 }
 
+
+
+/**/
+
 .node-type {
+
+  color: yellow;
 
   text-transform: uppercase;
 
-  font-weight: 800;
+  font-weight: 500;
 
   font-size: 0.85rem;
 
@@ -104,6 +149,7 @@
 
 .published-date, .updated-date {
 
+  color: yellow;
   font-size: 0.75em;
 
 }
@@ -148,17 +194,14 @@ a:visited {
 
 }
 
+
 body {
 
-  background-color: black;
+  background-color: red;
 
-  color: white;
-
-  font-family: "Public Sans Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Merriweather", system-ui, sans-serif;
 
   line-height: 1.5;
-
-  margin: 0;
 
   padding: 20px;
 
@@ -166,9 +209,7 @@ body {
 
 body, html {
   
-  background-color: black;
-  
-  color: white;
+  color: black;
   
   height: 100%;
   
@@ -177,6 +218,8 @@ body, html {
 }
 
 h1 {
+
+  color: yellow;
 
   font-family: 'Merriweather', 'Source Serif Pro', serif;
   
@@ -190,9 +233,9 @@ h3 {
 
 }
 
-footer.copyright {
+footer .copyright {
 
-  font-family: "Tiny5", sans-serif;
+  vertical-align: -0.1em;
   
 }
 
@@ -209,6 +252,8 @@ p.article {
 }
 
 p.article::before {
+
+  color: #111;
   
   content: '\00B6';
 
@@ -242,3 +287,322 @@ p.article:after {
   
 }
 */
+
+
+      /* BREAKING NEWS BANNER SCROLLER */
+.breaking-banner {
+  width: 100vw;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  /*border-bottom: 2px solid #fff;*/
+  position: relative; /* This keeps it in flow, not fixed */
+  color: black;
+  margin-left: -20px;
+  font-family: Arial;
+}
+
+.breaking-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  /* remove animation: scroll-banner... */
+}
+
+.breaking-content {
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+.breaking-content span {
+  flex-shrink: 0;
+}
+
+
+/*DARKMODE*/
+
+body.dark-mode .breaking-banner {
+  background: #111;
+  color: #f5f5f5;
+}
+
+body.dark-mode .subtitle {
+  color: #ccc;
+}
+
+body.dark-mode .title {
+  color: #fff;
+}
+
+/* Title Section */
+
+.colon {
+  vertical-align: 0.1em;
+}
+
+.subtitle {
+    font-size: 17px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: normal;
+    color: black;
+}
+
+.title {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.title-hyperlink {
+
+  color: black;
+
+}
+
+
+/* TRADEMARK STYLING */
+
+.trademarking, .trademarking-title, .trademark-r, .trademark-r-title {
+  font-family: 'Merriweather';
+}
+
+.trademarking-title {
+  font-size: 0.325em;
+  padding-left: 1px;
+  vertical-align: 1.7em;
+}
+
+.trademark-r-title {
+  font-size: 0.325em;
+  padding-left: 1px;
+  vertical-align: 1.7em;
+}
+
+.trademarking {
+  font-size: 0.4rem;
+  padding-left: 1px;
+  vertical-align: 0.6rem;
+}
+
+.trademark-r {
+  font-size: 0.5rem;
+  padding-left: 1px;
+  vertical-align: 0.5rem;
+}
+
+.trademarking-post-italics {
+  font-size: 0.4rem;
+  padding-left: 3px;
+  vertical-align: 0.6rem;
+}
+
+/* -- ® symbol appearing smaller than regular .trademark-r (not sure why)
+.trademark-r-post-italics {
+  font-size: 0.5rem;
+  padding-left: 3px;
+  vertical-align: 0.5rem;
+}
+*/
+
+.trademarking-caption {
+  font-size: 0.3rem;
+  padding-left: 0.5px;
+  vertical-align: 0.4rem;
+}
+
+.trademarking-footer {
+  font-size: 0.4rem;
+  vertical-align: 0.5rem;
+}
+
+
+/* DARK MODE TOGGLE STYLES */
+
+body.dark-mode {
+  background-color: #111;
+  color: #f5f5f5;
+}
+
+body.dark-mode .subtitle {
+  color: #ccc;
+}
+
+body.dark-mode .title {
+  color: #fff;
+}
+
+body.dark-mode .breaking-banner {
+  background: #111;
+  color: #f5f5f5;
+}
+
+body.dark-mode a.title-hyperlink {
+  color: white;
+}
+
+body.dark-mode sup.superscript-digits {
+  color: yellow;
+}
+
+body.dark-mode .article-paragraph a {
+  color: rgb(255, 217, 0);
+}
+
+body.dark-mode .footer-sitemap a {
+  color: orange;
+}
+
+body.dark-mode .published-date {
+  color: #ccc;
+}
+
+body.dark-mode .references a {
+  color: orange;
+}
+
+body.dark-mode a.plus-sign {
+  color: red;
+}
+
+body.dark-mode sup.superscript-digits a {
+  color: orange;
+}
+
+body.dark-mode hr {
+
+  border: 1px solid white;
+
+}
+
+
+/* Changing Color of BRAND SCROLLER Logos */
+/* Add smooth transition */
+.brand-item img {
+  transition: filter 0.3s ease;
+}
+
+/* Invert logo colors in dark mode */
+body.dark-mode .brand-item img {
+  filter: invert(1) brightness(1.5);
+}
+
+
+/* Dark Mode Styling for .contact-div */
+
+body.dark-mode .contact-div {
+  background-color: #5c1a1a; /* deep rosy red */
+  border: 1px solid #b33a3a; /* darker red border */
+  color: #ffe6e6; /* light pinkish for contrast */
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2); /* subtle reddish glow */
+}
+
+body.dark-mode .contact-div .more-indicator {
+  color: orange;
+}
+
+body.dark-mode .article-separator {
+  border: 0.7px solid #eee;
+}
+
+body.dark-mode p.article::before {
+
+  color: yellow;
+  
+  content: '\00B6';
+
+  left: 0.5em;
+
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%)
+  
+}
+
+
+/* THEME TOGGLE */
+
+#theme-toggle {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Embedded Theme Toggle Styles */
+#theme-toggle {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#theme-toggle.shrunk {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+#theme-toggle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
+
+#theme-toggle:hover {
+  color: black;
+  border-color: black;
+}
+
+/* Disable hover effect when button is active or focused (mobile and desktop) */
+#theme-toggle:active,
+#theme-toggle:focus {
+  background-color: transparent; /* Keep background transparent */
+  color: black; /* Maintain text color */
+  border-color: black; /* Maintain border color */
+}
+
+body.dark-mode #theme-toggle-container {
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode #theme-toggle {
+  color: #eee;
+  border: 1px solid #eee;
+}
+
+body.dark-mode #theme-toggle:hover {
+  color: white;
+  border-color: white;
+}
+
+/* Disable hover effect in dark mode when the button is active or focused */
+body.dark-mode #theme-toggle:active,
+body.dark-mode #theme-toggle:focus {
+  background-color: #111;
+  color: #eee;
+  border-color: #eee;
+}
+
