@@ -186,6 +186,16 @@ body.dark-mode .contact-div .more-indicator {
 }
 
 
+
+/* MAIN WRAPER STLING */
+
+.main-wrapper {
+
+  overflow-x: hidden;
+  
+}
+
+
 /* SEPARATOR */
 
 hr {
@@ -292,6 +302,10 @@ p.article {
   text-align: justify;
   hyphens: auto;
   
+}
+
+p.article a {
+  color: yellow;
 }
 
 body.dark-mode p.article {
@@ -450,7 +464,7 @@ body.dark-mode .article-separator {
 
   .article-slot {
 
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     border-left: 1px solid;
     border-right: 1px solid;
