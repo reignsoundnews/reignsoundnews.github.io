@@ -225,13 +225,9 @@ body.dark-mode .contact-div {
   display: block;
   margin-top: 8px;
   text-align: center;
-  color: #black;
+  color: red;
   font-size: 0.9em;
   font-style: italic;
-}
-
-body.dark-mode .contact-div .more-indicator {
-  color: red;
 }
 
 .pbr-disclaimer-contact-div {
