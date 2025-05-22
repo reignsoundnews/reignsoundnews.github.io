@@ -2,11 +2,6 @@
 
 			<link rel="stylesheet" href="../../../css/styles.css">
 
-<script>
-            function toggleDetails(el) {
-              el.classList.toggle("open");
-            }
-        </script>
 <article data-published-date="October 25, 2024">
 
           <!-- Setting node type -->
@@ -60,6 +55,15 @@
               </p>
 
             </section>
+
+            <div class="share-button-container" style="text-align: center;">
+              <button 
+              class="button-ui"
+              id="share-button"
+              >
+              🌍 Share
+              </button>
+            </div>
 
             <section class="references">
         
@@ -136,5 +140,32 @@
             </p>
 
       </article>
+
+
+<script>
+            function toggleDetails(el) {
+              el.classList.toggle("open");
+            }
+        </script>
+
+        <!-- SHARE BUTTON -->
+
+        <script>
+          const shareBtn = document.getElementById('share-button');
+
+          shareBtn.addEventListener('click', () => {
+            if (navigator.share) {
+              navigator.share({
+                title: document.title,
+                text: 'Check out this site!',
+                url: window.location.href,
+              })
+              .then(() => console.log('Shared successfully'))
+              .catch((err) => console.error('Error sharing:', err));
+            } else {
+              alert('Sharing not supported on this device/browser.');
+            }
+          });
+        </script>
 
       
