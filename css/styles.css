@@ -83,13 +83,28 @@ body.dark-mode .breaking-banner {
 }
 
 
+.clock-date {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Merriweather', serif;
+  color: rgb(134, 0, 0);
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+body.dark-mode .clock-date {
+  color: #cfcfcf;
+}
+
+
+
 .clock-row {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2px; /* tighter spacing */
   height: 35px;
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(134, 0, 0);
   transform: translateY(-10px);
 }
@@ -100,7 +115,7 @@ body.dark-mode .clock-row {
 
 #clock-hours,
 #clock-minutes,
-#clock-ampm {
+#clock-ampm, .clock-date {
   font-family: 'Merriweather', serif;
   display: flex;
   align-items: center;
@@ -121,7 +136,7 @@ body.dark-mode .clock-row {
 }
 
 #clock-zone {
-  font-size: 25px;
+  font-size: 20px;
   margin-left: 8px;
   letter-spacing: 1px;
 }

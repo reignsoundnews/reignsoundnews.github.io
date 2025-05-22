@@ -208,6 +208,14 @@ function updateClock() {
   document.getElementById("clock-ampm").textContent = ampm;
   document.getElementById("clock-zone").textContent = timeZoneAbbr;
 
+  // Add date and weekday
+  const weekday = now.toLocaleDateString(undefined, { weekday: 'short' }); // "Thu"
+  const year = now.getFullYear();
+  const month = (now.getMonth() + 1).toString().padStart(2, '0');
+  const day = now.getDate().toString().padStart(2, '0');
+  const formattedDate = `${weekday} ${year}-${month}-${day}`;
+  document.getElementById("clock-date").textContent = formattedDate;
+
   // Blinking colon
   const semiColon = document.getElementById("clock-semi-colon");
   semiColon.style.visibility = now.getSeconds() % 2 === 0 ? 'visible' : 'hidden';
@@ -215,7 +223,6 @@ function updateClock() {
 
 updateClock();
 setInterval(updateClock, 1000);
-
 
 
 
