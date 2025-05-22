@@ -63,6 +63,18 @@
 }
 
 
+.breaking-banner a {
+
+  text-decoration: none;
+
+}
+
+
+body.dark-mode .breaking-banner a {
+  color: #eee;
+}
+
+
 body.dark-mode .breaking-banner {
 
   background: #111;
