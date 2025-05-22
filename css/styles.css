@@ -71,61 +71,47 @@ body.dark-mode .breaking-banner {
 }
 
 
-.clock-display {
-  font-family: 'Merriweather', serif;
-  width: 100%;
-  color: #111;
-  display: flex;
-  justify-content: center;
-}
-
 .clock-row {
   display: flex;
-  justify-content: space-between;
-  height: 50px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2px; /* tighter spacing */
+  height: 35px;
+  font-size: 25px;
+  color: rgb(134, 0, 0);
+  transform: translateY(-10px);
 }
 
-.clock-row > * {
-  flex: 1;             /* each child takes equal space */
-  display: flex;       /* enable flex inside children */
-  justify-content: center;  /* center content inside each */
-  align-items: center; /* vertically center content */
+body.dark-mode .clock-row {
+  color: #cfcfcf;
 }
 
-
-#clock-time, #clock-ampm {
+#clock-hours,
+#clock-minutes,
+#clock-ampm {
+  font-family: 'Merriweather', serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Match height of row */
 }
 
-#clock-time {
-  font-size: 27px; /* Reduced slightly for balance */
-  color: rgb(134, 0, 0);
-  flex: 1;
-  opacity: 0.7;
+#clock-hours,
+#clock-minutes {
+  font-weight: 300;
 }
 
-#clock-ampm {
-  font-size: 27px;
-  color: rgb(134, 0, 0);
-  flex: 0;
+#clock-semi-colon {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 1px; /* reduced horizontal spacing */
+  align-self: center;
+  transform: translateY(-2px);
 }
 
 #clock-zone {
-  font-size: 27px; /* bigger for readability */
-  color: rgb(134, 0, 0);
-  line-height: 1;
-  height: auto;
-  margin-top: 0;
-  display: flex;           /* keep flex to align with other items */
-  align-items: center;     /* vertical center */
-  justify-content: center; /* horizontal center */
-  letter-spacing: 2px;     /* optional, for spacing between letters */
+  font-size: 25px;
+  margin-left: 8px;
+  letter-spacing: 1px;
 }
 
 
@@ -660,6 +646,20 @@ body.dark-mode .button-ui-disabled {
 
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
+}
+
+.theme-toggle-disabled{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: rgb(39, 39, 39);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: not-allowed;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 #theme-toggle.shrunk {
