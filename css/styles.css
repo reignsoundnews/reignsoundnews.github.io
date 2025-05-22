@@ -128,7 +128,7 @@ body.dark-mode .clock-row {
 }
 
 #clock-semi-colon {
-  font-size: 22px;
+  font-size: 15px;
   font-weight: bold;
   margin: 0 1px; /* reduced horizontal spacing */
   align-self: center;
