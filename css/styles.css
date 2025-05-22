@@ -476,6 +476,47 @@ body.dark-mode .article-separator {
 }
 
 
+/* SUPERSCRIPT STYLING */
+
+.superscript-content {
+  font-size:  0.5em;
+  vertical-align: super;
+}
+
+.superscript-digits {
+
+  font-family: 'Merriweather';
+  font-size: 0.4rem;
+  padding-left: 1px;
+  vertical-align: 0.6rem;
+
+}
+
+.superscript-link {
+  color: purple;
+  cursor: pointer;
+  font-size: 0.8em;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.superscript-link sup:hover {
+  text-decoration: underline;
+}
+
+.superscript-link:hover {
+  color:red;
+}
+
+.superscript-link sup:hover .superlink-number {
+  text-decoration: underline;
+}
+
+.superscript-number {
+  text-decoration: none;
+}
+
+
 /* THEME TOGGLE */
 
 #theme-toggle {
