@@ -186,6 +186,42 @@
     });
 
 
+// CLOCK SCRIPT
+
+function updateClock() {
+  const now = new Date();
+
+  // Get time string without seconds, 24-hour format (hour12: false)
+  const timeString = now.toLocaleTimeString(undefined, {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  });
+
+  // Get AM/PM separately (using 12-hour format)
+  const ampm = now.toLocaleTimeString(undefined, {
+    hour: '2-digit',
+    hour12: true,
+  }).split(' ')[1];
+
+  // Get abbreviated timezone name (e.g., EDT)
+  const timeZoneAbbr = now.toLocaleTimeString(undefined, {
+    timeZoneName: 'short',
+  }).split(' ').pop();
+
+  document.getElementById("clock-time").textContent = timeString;
+  document.getElementById("clock-ampm").textContent = ampm;
+
+  // Create stacked timezone (E on top of D on top of T)
+  document.getElementById("clock-zone").textContent = timeZoneAbbr;
+
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+
+
 // COPYRIGHT CURRENT YEAR SCRIPT
 
   // Set the current year for copyright
