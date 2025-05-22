@@ -9,11 +9,11 @@
           
     const articles = [
 
-    { id: "article-slot-1", file: "/news/articles/2022-11-16/ataah-king-wrongful-arrest/index.html" },
+    { id: "article-slot-1", file: "news/articles/2022-11-16/ataah-king-wrongful-arrest/index.html" },
     
-    { id: "article-slot-3", file: "/news/articles/2024-10-25-NY-weekly/index.html" },
+    { id: "article-slot-3", file: "news/articles/2024-10-25-NY-weekly/index.html" },
     
-    { id: "article-slot-2", file: "/news/articles/2024-10-03-TBWST/index.html" }
+    { id: "article-slot-2", file: "news/articles/2024-10-03-TBWST/index.html" }
 
     ];
 
@@ -293,6 +293,23 @@
     if (currentScroll < contentWidth) {
         breakingTrack.scrollLeft += 1;  // Adjust speed of loop
     }
+    });
+
+
+// SAVE BUTTON SCRIPT
+
+    document.getElementById("save-button").addEventListener("click", () => {
+    const element = document.body; // or change this to a specific section like document.getElementById("article-content")
+
+    const opt = {
+        margin:       0.5,
+        filename:     'article.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+    html2pdf().set(opt).from(element).save();
     });
 
 

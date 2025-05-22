@@ -522,8 +522,17 @@ body.dark-mode .article-separator {
 }
 
 
-.button-ui{
+.article-buttons-container {
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
+}
+
+
+.button-ui{
+  width: fit-content;
   box-sizing: border-box;
   background-color: transparent;
   color: black;
