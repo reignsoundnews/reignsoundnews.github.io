@@ -223,15 +223,20 @@ body.dark-mode .node-type {
 }
 
 
+.published-date-date {
+
+  color: yellow;
+  font-weight: 300;
+
+}
+
 .published-date, .updated-date {
-
-  color: black;
-  font-size: 0.75em;
-
+  font-size: 0.5em;
 }
 
 .updated-date {
 
+  color: black;
   font-style: italic;
 
 }
