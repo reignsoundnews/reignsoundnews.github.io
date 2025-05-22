@@ -141,31 +141,4 @@
 
       </article>
 
-
-<script>
-            function toggleDetails(el) {
-              el.classList.toggle("open");
-            }
-        </script>
-
-        <!-- SHARE BUTTON -->
-
-        <script>
-          const shareBtn = document.getElementById('share-button');
-
-          shareBtn.addEventListener('click', () => {
-            if (navigator.share) {
-              navigator.share({
-                title: document.title,
-                text: 'Check out this site!',
-                url: window.location.href,
-              })
-              .then(() => console.log('Shared successfully'))
-              .catch((err) => console.error('Error sharing:', err));
-            } else {
-              alert('Sharing not supported on this device/browser.');
-            }
-          });
-        </script>
-
-      
+      <script src="../../../javascript/main.js"></script>
