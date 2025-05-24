@@ -71,14 +71,15 @@
 
 
 body.dark-mode .breaking-banner a {
-  color: #eee;
+  color: white;
 }
 
 
 body.dark-mode .breaking-banner {
 
-  background: #111;
-  color: #f5f5f5;
+  background: transparent;
+  color: white;
+  opacity: 0.8;
 
 }
 
@@ -86,7 +87,6 @@ body.dark-mode .breaking-banner {
 .clock-date {
   text-align: center;
   font-size: 20px;
-  font-family: 'Merriweather', serif;
   color: rgb(134, 0, 0);
   margin-left: 5px;
   text-transform: uppercase;
@@ -111,12 +111,15 @@ body.dark-mode .clock-date {
 
 body.dark-mode .clock-row {
   color: #cfcfcf;
+    opacity: 0.5;
 }
 
 #clock-hours,
 #clock-minutes,
-#clock-ampm, .clock-date {
-  font-family: 'Merriweather', serif;
+#clock-ampm, 
+#clock-zone,
+.clock-date {
+  font-family: 'JetBrains Mono', monospace;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +171,8 @@ body.dark-mode p.article::before {
   left: 0.5em;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
+  opacity: 0.59;
   
 }
 
@@ -198,15 +202,15 @@ body.dark-mode p.article::before {
 /* CONTACT DIV BOX STYLES */
 
 .contact-div {
-  background-color: darkred;
+  background-color: transparent;
   padding: 20px;
-  border: 1px solid darkred;
+  border: 1.5px dashed darkred;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-family: 'Merriweather', serif;
   max-width: 700px;
   margin: 20px auto;
-  color: red;
+  color: darkred;
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -214,9 +218,10 @@ body.dark-mode p.article::before {
 
 body.dark-mode .contact-div {
 
-  background-color: #1c1c1c;
-  border: 1px solid #1c1c1c;
+  background-color: transparent;
+  border: 3px dashed #1c1c1c;
   color: #cecece;
+  opacity: 0.7;
 
 }
 
@@ -240,9 +245,13 @@ body.dark-mode .contact-div {
   display: block;
   margin-top: 8px;
   text-align: center;
-  color: red;
+  color: darkred;
   font-size: 0.9em;
   font-style: italic;
+}
+
+body.dark-mode .more-indicator {
+  color: white;
 }
 
 .pbr-disclaimer-contact-div {
@@ -290,7 +299,9 @@ hr {
 }
 
 body.dark-mode .node-type {
-  color: orange;
+  color: white;
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 
@@ -302,7 +313,7 @@ body.dark-mode .node-type {
 }
 
 body.dark-mode .published-date-date {
-  color: orange;
+  color: white;
 }
 
 .published-date, .updated-date {
@@ -359,10 +370,17 @@ h1 {
 
 body.dark-mode h1 {
   color: #eee;
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 h3 {
   font-family: 'Merriweather', 'Source Serif Pro', serif;
+}
+
+body.dark-mode h3 {
+  color: #eee;
+  opacity: 0.5;
 }
 
 footer .copyright {
@@ -389,11 +407,19 @@ p.article a {
 }
 
 body.dark-mode p.article {
-  color: orange;
+  color: white;
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 body.dark-mode p.article a {
-  color: orange;
+  color: white;
+}
+
+body.dark-mode p {
+  color: #eee;
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 
@@ -473,7 +499,7 @@ body.dark-mode p.article a {
 
 body.dark-mode {
 
-  background-color: #111;
+  background-color: black;
   color: #f5f5f5;
 
 }
@@ -485,7 +511,7 @@ body.dark-mode a.title-hyperlink {
 }
 
 body.dark-mode sup.superscript-digits {
-  color: yellow;
+  color: orange;
 }
 
 body.dark-mode .article-paragraph a {
@@ -514,7 +540,8 @@ body.dark-mode sup.superscript-digits a {
 
 body.dark-mode hr {
 
-  border: 1px solid white;
+  border: 0.5px solid white;
+  opacity: 0.8;
 
 }
 
@@ -603,6 +630,7 @@ body.dark-mode .article-separator {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  
 }
 
 
@@ -648,10 +676,15 @@ body.dark-mode .button-ui-disabled {
 
 .buttons-disclaimer {
 
-  font-size: 0.5em;
+  font-size: 0.7em;
   margin-top: 30px;
   text-align: center;
 
+}
+
+body.dark-mode .buttons-disclaimer {
+  color: white;
+  opacity: 0.15;
 }
 
 
@@ -745,7 +778,8 @@ body.dark-mode #theme-toggle-container {
 body.dark-mode #theme-toggle {
 
   color: #eee;
-  border: 1px solid #eee;
+  border: 0.5px solid #eee;
+  opacity: 0.8;
 
 }
 
@@ -785,6 +819,7 @@ body.dark-mode #theme-toggle:focus {
 .subtitle {
 
     font-size: 17px;
+    font-weight: 300;
     text-align: center;
     margin-top: 10px;
     font-weight: normal;
@@ -793,7 +828,8 @@ body.dark-mode #theme-toggle:focus {
 }
 
 body.dark-mode .subtitle {
-  color: #cecece;
+  color: white;
+  opacity: 0.8
 }
 
 
@@ -813,5 +849,7 @@ body.dark-mode .subtitle {
 }
 
 body.dark-mode .title {
-  color: #fff;
+  color: white;
+  font-weight: 400;
+  opacity: 0.8;
 }
