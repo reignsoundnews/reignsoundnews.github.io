@@ -1,91 +1,351 @@
 <!DOCTYPE html>
+<!-- DOCUMENT TYPE DECLARATION -->
 
-<html>
+<html lang="en">
+<!-- ROOT ELEMENT with LANGUAGE ATTRIBUTE for ACCESIBILITY and SEO -->
 
     <head>
+    <!-- HEAD SECTION of the DOCUMENT
+        > Contains metadata, links to stylesheets, and scripts
+        >> This section is not displayed on the page but provides important information for browsers and search engines
+        >>> The head section is where you define the title, character set, viewport settings, and other metadata
+        >>> This information is used by browsers to render the page correctly and by search engines to index the page
+        >>> The head section is also where you link to external resources like stylesheets and scripts
+        >>> This is important for the overall functionality and appearance of the page
+    --> 
 
-      <!-- GOOGLE PUBLISHER CENTER VERIFICATION: -->
+    <!-- METADATA -->
 
-        <!-- Load the Google Analytics gtag.js library asynchronously -->
+      <!-- CANONICAL URL -->
+
+        <link rel="canonical" href="https://reignsoundnews.github.io">
+        <!--
+            Set the canonical URL for SEO:
+            > 'href="https://reignsoundnews.github.io"'
+            >> Specifies the preferred URL for search engines to index
+        -->
+
+
+      <!-- CHARACTER ENCODING -->
+
+        <meta charset="UTF-8">
+        <!--
+            Set the character set for the document:
+            > 'content="UTF-8"'
+            >> Specifies the character encoding for the HTML document
+        -->
+
+
+      <!-- DESCRIPTION -->
+
+        <meta 
+        name="description" 
+        content="Reignsound℠ News delivers coverage of entertainment and world news — authoritative journalism in adherence to international reporting standards.">
+        <!--
+            Set the page description for SEO:
+            > 'content'
+            >> Provides a brief description of the page's content
+        -->
+
+
+      <!-- INTERNET EXPLORER® / MICROSOFT® EDGE™ COMPATIBILITY -->
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--
+            Set compatibility mode for Internet Explorer® and Microsoft Edge®:
+            > 'content="IE=edge"'
+            >> Ensures the latest rendering engine is used
+        -->
+
+
+      <!-- GOOGLE® ANALYTICS™ SETTINGS: -->
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMPL32CFHS"></script>
-        
+        <!--
+            Setting the source to load the Google® Analytics gtag.js library asynchronously:
+            > 'async'
+            >> Mode to load the script without blocking the page rendering
+            > 'src="https://www.googletagmanager.com/gtag/js?id=G-TMPL32CFHS"'
+            >> Specifying the source of the script -- includes the GA4 property's unique Measurement ID
+        -->
+            
+      
+      <!-- GOOGLE® ANALYTICS™ LOADER: -->
+
         <script>
-          
-          // Initialize the dataLayer, if it is not already initialized
+        // Script to load the Google® Analytics gtag.js library and initialize the dataLayer for tracking events
+        
+            window.dataLayer = window.dataLayer || [];
+            // Initialize the dataLayer, if it is not already initialized
 
-          window.dataLayer = window.dataLayer || [];
+            
+            function gtag(){
 
+              dataLayer.push(arguments);
+            
+            }
+            // Defining the gtag function that pushes events to the dataLayer
 
-          // Define the gtag function that pushes events to the dataLayer
+            
+            gtag('js', new Date());
+            // Send an event to indicate the page load time (using the current date)
 
-          function gtag(){
-
-            dataLayer.push(arguments);
-          
-          }
-
-
-          // Send an event to indicate the page load time (using the current date)
-          gtag('js', new Date());
-
-          
-          // Configure Google Analytics with the GA4 property's unique Measurement ID
-          gtag('config', 'G-TMPL32CFHS');
+            
+            gtag('config', 'G-TMPL32CFHS');
+            // Configure Google® Analytics with the GA4 property's unique Measurement ID
           
         </script>
 
-      <!-- LINKING FONTS: -->
 
-        <!-- 
-            > Pre-connect to the Google Fonts domain to speed up font loading
-            >> This helps the browser connect to the fonts.googleapis.com domain early
-            >>> This allows the font stylesheet to load faster
-        -->
-          
-          <link rel="preconnect" href="https://fonts.googleapis.com">
+      <!-- MOBILE WEB APP TAG -->
 
+        <meta name="apple-mobile-web-app-capable" content="yes">
         <!--
-            > Pre-connect to the fonts.gstatic.com domain to load static font files
-            >> This allows the browser to start making a connection to the domain where font files are served
-            >>> This further improves the load time for fonts
+            Set the mobile web app capability for iOS devices:
+            > 'content="yes"'
+            >> Specifies that the web app can be run in full-screen mode
         -->
 
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+      <!-- OPEN GRAPH TAGS -->
 
-        <!-- 'JetBrains'
-            > Link to Google Fonts to load the JetBrains Mono font family
-            > 'family=JetBrainsMono'
-            >> Specifies the font to use
-            > 'ital,wght@0,100..800;1,100..800'
-            >> Defines requested weights and italics
-            > 'display=swap'
-            >> Ensures that the fallback font is shown until the custom font is loaded
+        <meta 
+        property="og:description"
+        content="Reignsound℠ News delivers coverage of entertainment and world news — authoritative journalism in adherence to international reporting standards."
+        >
+        <!--
+            Set the Open Graph description for the page:
+            > 'content'
+            >> Provides a brief description of the page's content for social media sharing
         -->
 
-          <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
-
-        <!-- 
-            LINKING 'Merriweather' FONT:
-            > For more details, see comments for 'JetBrains' font above
+        <meta
+        property="og:image"
+        content="https://reignsoundnews.github.io/images/og-image.png"
+        >
+        <!--
+            Set the Open Graph image for the page:
+            > 'content'
+            >> Specifies the image to be used when the page is shared on social media
         -->
 
-          <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        <meta
+        property="og:image:alt"
+        content="Reignsound℠ News logo and tagline"
+        >
+        <!--
+            Set the Open Graph image alt text for the page:
+            > 'content="Reignsound℠ News logo and tagline"'
+            >> Specifies the alt text for the Open Graph image'
+            >> Provides a description of the image for accessibility and SEO
+            >> This is important for users who cannot see the image
+            >> This text will be displayed if the image cannot be loaded
+        -->
 
 
-        <!-- 'Tiny5'
-            > For more details, see comments for 'JetBrains' font above
+        <meta
+        property="og:locale"
+        content="en_US"
+        >
+        <!--
+            Set the Open Graph locale for the page:
+            > 'content="en_US"'
+            >> Specifies the language and region of the page
+            > 'en_US' indicating English (United States) is already the default locale setting and is only being manually set as a reference for future alternate locales
+            >> This is useful for internationalization and localization
+        -->
+
+
+        <meta
+        property="og:site_name"
+        content="Reignsound℠ News"
+        >
+        <!--
+            Set the Open Graph site name for the page:
+            > 'content="Reignsound℠ News"'
+            >> Specifies the name of the website for social media sharing
+        -->
+
+
+        <meta 
+        property="og:title" 
+        content="Reignsound℠ News"
+        >
+        <!--
+            Set the Open Graph title for the page:
+            > 'content="Reignsound℠ News"'
+            >> Specifies the title of the page for social media sharing
+        -->
+
+
+        <meta 
+        property="og:type" 
+        content="website"
+        >
+        <!--
+            Set the Open Graph type for the page:
+            > 'content="website"'
+            >> Specifies that the page is a website
+        -->
+
+
+        <meta 
+        property="og:url"
+        content="https://reignsoundnews.github.io"
+        >
+        <!--
+            Set the Open Graph URL for the page:
+            > 'content="https://reignsoundnews.github.io"'
+            >> Specifies the canonical URL of the page for social media sharing
+        -->
+
+
+      <!-- ROBOTS META TAG -->
+
+        <meta name="robots" content="index, follow">
+        <!--
+            Set the robots meta tag for SEO:
+            > 'content="index, follow"'
+            >> Instructs search engines to index the page and follow links on it
+        -->
+
+
+      <!-- STRUCTURED DATA -->
+      
+        <script type="application/ld+json">
+
+          {
+
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Reignsound℠ News",
+            "description": "Reignsound℠ News delivers coverage of entertainment and world news — authoritative journalism in adherence to international reporting standards.",
+            "url": "https://reignsoundnews.github.io",
+            "publisher": {
+
+              "@type": "Organization",
+              "name": "Reignsound℠ News",
+              "logo": {
+
+                "@type": "ImageObject",
+                "url": "https://reignsoundnews.github.io/images/logo.png"
+
+              }
+
+            }
+
+          }
+
+        </script>
+        <!--
+            Set the structured data for the page:
+            > 'type="application/ld+json"'
+            >> Specifies that the content is in JSON-LD format
+            > The JSON-LD script contains structured data about the website
+            >> This helps search engines understand the content and context of the page
+            >> It includes information about the website's name, description, URL, and publisher
+            >> The publisher information includes the organization name and logo
+            >> This structured data can improve the visibility of the page in search engine results
+            >> It can also enhance the appearance of the page in search results with rich snippets
+            >> This is important for SEO and can help attract more visitors to the page
+        -->
+
+
+      <!-- TITLE -->
+
+        <title>Reignsound℠ News</title>
+
+
+      <!-- TWITTER CARD -->
+
+        <meta
+        name="twitter:card"
+        content="summary_large_image"
+        >
+        <!--
+            Set the Twitter card type for the page:
+            > 'content="summary_large_image"'
+            >> Specifies that a large image will be displayed in the Twitter card
+        -->
+
+
+        <meta
+        name="twitter:description"
+        content="Reignsound℠ News delivers coverage of entertainment and world news — authoritative journalism in adherence to international reporting standards."
+        >
+        <!--
+            Set the Twitter description for the page:
+            > 'content'
+            >> Provides a brief description of the page's content for Twitter sharing
+        -->
+
+
+        <meta
+        name="twitter:image"
+        content="https://reignsoundnews.github.io/images/twitter-image.png"
+        >
+        <!--
+            Set the Twitter image for the page:
+            > 'content="https://reignsoundnews.github.io/images/twitter-image.png"'
+            >> Specifies the image to be used when the page is shared on Twitter
+        -->
+
+
+        <meta
+        name="twitter:image:alt"
+        content="Reignsound℠ News logo and tagline"
+        >
+        <!--
+            Set the Twitter image alt text for the page:
+            > 'content="Reignsound℠ News logo and tagline"'
+            >> Specifies the alt text for the Twitter image
+            >> Provides a description of the image for accessibility and SEO
+            >> This is important for users who cannot see the image
+            >> This text will be displayed if the image cannot be loaded
+        -->
+
+
+        <meta
+        name="twitter:site"
+        content="@ReignsoundXL"
+        >
+        <!--
+            Set the Twitter site handle for the page:
+            > 'content="@ReignsoundXL"'
+            >> Specifies the Twitter handle of the website
+            >> This is used to link the page to the official Twitter account
+        -->
+
+
+        <meta
+        name="twitter:title"
+        content="Reignsound℠ News"
+        >
+        <!--
+            Set the Twitter title for the page:
+            > 'content="Reignsound℠ News"'
+            >> Specifies the title of the page for Twitter sharing
         -->
       
-          <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
-        
-      <!-- STYLE SHEET -->
 
-        <link rel="stylesheet" href="css/styles.css">
+      <!-- VIEWPORT -->
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+            Set viewport for responsive design:
+            > 'width=device-width'
+            >> Ensures the page fits the device's screen
+            > 'initial-scale=1.0'
+            >> Sets the zoom level to 100% when the page is first loaded
+        -->
 
-      <!-- Links to favicons -->
+
+    <!-- RESOURCES -->
+
+
+      <!-- FAVICONS -->
         
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/white-favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/white-favicon-32x32.png">
@@ -93,26 +353,54 @@
         <link rel="icon" type="image/png" sizes="64x64" href="/images/favicons/white-favicon-64x64.png">
         <link rel="icon" type="image/png" sizes="180x180" href="/images/white-apple-touch-icon-180x180.png">
 
-      <!-- Setting character encoding -->
-      <meta charset="UTF-8">
 
-      <!--
-          Set viewport for responsive design:
-          > 'Width'
-          >> Ensures the page fits the screen
-          > 'Initial-scale'
-          >> Sets the zoom level
-      -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- FONTS: -->
+          
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- 
+          > Pre-connect to the Google Fonts domain to speed up font loading
+          >> This helps the browser connect to the fonts.googleapis.com domain early
+          >>> This allows the font stylesheet to load faster
+        -->
 
-      <!-- Setting website title -->
-      <title>REIGNSOUND™ NEWS</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--
+          > Pre-connect to the fonts.gstatic.com domain to load static font files
+          >> This allows the browser to start making a connection to the domain where font files are served
+          >>> This further improves the load time for fonts
+        -->
+
+
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+        <!-- 'JetBrains' Font:
+          > Link to Google Fonts to load the JetBrains Mono font family
+          > 'family=JetBrainsMono'
+          >> Specifies the font to use
+          > 'ital,wght@0,100..800;1,100..800'
+          >> Defines requested weights and italics
+          > 'display=swap'
+          >> Ensures that the fallback font is shown until the custom font is loaded
+        -->
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- 
+          'Merriweather' Font:
+          > For more details, see comments for 'JetBrains' font above
+        -->
+
+    
+        <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+        <!-- 'Tiny5' Font:
+          > For more details, see comments for 'JetBrains' font above
+        -->
 
     </head>
 
     <body>
 
-      <!-- LIVE TIME CLOCK -->
+      <!-- LIVE CLOCK -->
       
         <div class="clock-row">
           <span id="clock-hours"></span>
@@ -1691,7 +1979,7 @@
 
               </div>
               
-              Powered by Reignsound<sup class="trademarking-footer">SM</sup>
+              Powered by <i>Reignsound</i>XL<sup class="trademarking-footer">TM</sup>
               <br>
               
               All rights reserved
