@@ -135,7 +135,6 @@ body.dark-mode .clock-row {
   font-weight: bold;
   margin: 0 1px; /* reduced horizontal spacing */
   align-self: center;
-  transform: translateY(-2px);
 }
 
 #clock-zone {
@@ -812,6 +811,26 @@ body.dark-mode #theme-toggle:focus {
     background-color: transparent !important;
     color: inherit !important;
     border-color: inherit !important;
+  }
+}
+
+
+/* SECTION TITLE */
+.section-title {
+
+  color: #1a1a1a;
+  font-size: 145px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+
+}
+
+
+@media (max-width: 768px) {
+  .section-title {
+    color: #1a1a1a;
+    font-size: 50px;
   }
 }
 
